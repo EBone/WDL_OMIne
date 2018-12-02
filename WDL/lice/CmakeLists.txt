@@ -1,0 +1,9 @@
+project(lice)
+
+file(GLOB lice_h ./*.h)
+file(GLOB lice_cpp ./*.cpp)
+include_directories(glew/include)
+
+add_library(lice STATIC ${lice_h} ${lice_cpp})
+target_link_libraries(lice glew libpng)
+add_subdirectory(glew)

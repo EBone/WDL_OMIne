@@ -1,0 +1,7 @@
+project(glew)
+
+file(GLOB glew_h include/GL/*.h)
+file(GLOB glew_c src/*.c)
+
+add_library(glew STATIC ${glew_h} ${glew_c})
+target_link_libraries(glew OpenGl32)

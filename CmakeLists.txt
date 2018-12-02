@@ -1,0 +1,9 @@
+project("IPlug_W")
+
+cmake_minimum_required(VERSION 3.13)
+add_subdirectory(WDL/lice)
+add_subdirectory(WDL/IPlug)
+add_subdirectory(IPlugDistortion)
+add_subdirectory(WDL/rtaudiomidi)
+add_subdirectory(WDL/libpng)
+add_subdirectory(WDL/zlib)

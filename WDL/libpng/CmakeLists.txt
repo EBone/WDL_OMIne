@@ -1,0 +1,7 @@
+project(libpng)
+
+file(GLOB png_h ./*.h)
+file(GLOB png_c ./*.c)
+
+add_library(libpng ${png_h} ${png_c})
+target_link_libraries(libpng zlib)

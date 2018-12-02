@@ -1,0 +1,5 @@
+project(zlib)
+
+file(GLOB zlib_h ./*.h)
+file(GLOB zlib_src ./*.c)
+add_library(zlib ${zlib_h} ${zlib_src})
