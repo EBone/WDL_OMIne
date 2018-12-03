@@ -1,0 +1,35 @@
+﻿project(Dis_App)
+# set (Tutorial_VERSION_MAJOR 1)
+# set (Tutorial_VERSION_MINOR 0)
+ 
+# configure a header file to pass some of the CMake settings
+# to the source code
+configure_file (
+  "${PROJECT_SOURCE_DIR}/config.h.in"
+  "${PROJECT_BINARY_DIR}/config.h"
+  )
+ 
+include_directories("${PROJECT_BINARY_DIR}")
+
+file(GLOB app_wrapper *.h )
+file(GLOB app_wrapper_src *.cpp)
+file(GLOB asio_h ..../../ASIO_SDK/include/*.h)
+file(GLOB asio_src ../../ASIO_SDK/include/*.cpp)
+source_group(ASIO FILES ${asio_h} ${asio_src})
+
+include_directories(../../WDL/IPlug)
+include_directories(../..//WDL/IPlug/impl)
+include_directories(../../WDL)
+include_directories(../../WDL/rtaudiomidi)
+include_directories(../../ASIO_SDK/include)
+
+
+file(GLOB Standalone_wrapper ../../WDL/IPlug/IPlugStandalone.h ../../WDL/IPlug/IPlugStandalone.cpp )
+source_group(main_share FILES ${app_wrapper} ${app_wrapper_src} ${Standalone_wrapper}) 
+source_group(src FILES ../../WDL/besselfilter.cpp ../share/resource.h  ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp)
+source_group(rc FILES ../share/IPlugDistortion.rc)
+add_executable(Distortion ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp ${asio_h} ${asio_src} ${app_wrapper} ${app_wrapper_src} ${Standalone_wrapper} ../../WDL/besselfilter.cpp ../share/resource.h ../share/IPlugDistortion.rc)
+target_link_libraries(Distortion lice Iplug_app rtaudiomidi kernel32 WinInet Gdi32 WinSpool ComDlg32)
+target_link_libraries(Distortion AdvApi32 shell32 Ole32 Uuid odbc32 odbccp32 OleAut32 ComCtl32)
+
+set_target_properties(Distortion PROPERTIES WIN32_EXECUTABLE 1)

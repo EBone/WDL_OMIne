@@ -1,4 +1,4 @@
-#ifndef _IPLUGAPP_APP_MAIN_H_
+﻿#ifndef _IPLUGAPP_APP_MAIN_H_
 #define _IPLUGAPP_APP_MAIN_H_
 
 #include "IPlugOSDetect.h"
@@ -44,7 +44,7 @@
 #include <string>
 #include <vector>
 
-#include "../IPlugDistortion.h" // change this to match your iplug plugin .h file
+#include "../share/IPlugDistortion.h" // change this to match your iplug plugin .h file
 
 typedef unsigned short UInt16;
 

@@ -2,6 +2,6 @@ project(rtaudiomidi)
 
 file(GLOB rt_h *.h)
 file(GLOB rt_src *.cpp)
-
+include_directories(../../ASIO_SDK/include)
 add_library(rtaudiomidi STATIC ${rt_h} ${rt_src})
 target_link_libraries(rtaudiomidi WinMM.Lib)

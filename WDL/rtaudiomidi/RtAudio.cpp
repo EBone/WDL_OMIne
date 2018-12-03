@@ -1,4 +1,4 @@
-/************************************************************************/
+﻿/************************************************************************/
 /*! \class RtAudio
     \brief Realtime audio i/o C++ classes.
 
@@ -39,7 +39,8 @@
 /************************************************************************/
 
 // RtAudio: Version 4.0.11
-
+#define __WINDOWS_DS__
+#define __WINDOWS_ASIO__
 #include "RtAudio.h"
 #include <iostream>
 #include <cstdlib>

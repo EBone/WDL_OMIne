@@ -1,5 +1,5 @@
-
-#define SA_API
+﻿
+#include "config.h"
 #define PLUG_MFR "AcmeInc"
 #define PLUG_NAME "IPlugDistortion"
 
@@ -63,12 +63,45 @@ instrument determined by PLUG _IS _INST
 //#define KNOB_FN "resources/img/knob.png"
 
 // GUI default dimensions
-#define GUI_WIDTH 300
-#define GUI_HEIGHT 300
+#define KNOB_ID 101
+
+// Unique IDs for each image resource.
+#define BG_ID                   100
+#define ISWITCHCONTROL_2_ID     101
+#define ISWITCHCONTROL_3_ID     102
+#define IRADIOBUTTONSCONTROL_ID 103
+#define ICONTACTCONTROL_ID      104
+#define IFADERCONTROL_HORIZ_ID  105
+#define IFADERCONTROL_VERT_ID   106
+#define IKNOBROTATERCONTROL_ID  107
+#define IKNOBMULTICONTROL_ID    108
+#define IKRMC_BASE_ID           109
+#define IKRMC_MASK_ID           110
+#define IKRMC_TOP_ID            111
+#define IBOC_ID                 112
+
+// Image resource locations for this plug.
+#define BG_FN                     "C:/Users/TBT_E/wdl-ol/IPlugExamples/IPlugControls/resources/img/BG_1024x640.png"
+#define ISWITCHCONTROL_2_FN       "resources/img/ISwitchControl_x2.png"
+#define ISWITCHCONTROL_3_FN       "resources/img/ISwitchControl_x3.png"
+#define IRADIOBUTTONSCONTROL_FN   "resources/img/IRadioButtonsControl_x2.png"
+#define ICONTACTCONTROL_FN        "resources/img/IContactControl_x2.png"
+#define IFADERCONTROL_HORIZ_FN    "resources/img/IFaderControl_Horiz.png"
+#define IFADERCONTROL_VERT_FN     "resources/img/IFaderControl_Vert.png"
+#define IKNOBROTATERCONTROL_FN    "resources/img/IKnobRotaterControl.png"
+#define IKNOBMULTICONTROL_FN      "resources/img/IKnobMultiControl_x14.png"
+#define IKRMC_BASE_FN             "resources/img/IKRMC_Base.png"
+#define IKRMC_MASK_FN             "resources/img/IKRMC_Mask.png"
+#define IKRMC_TOP_FN              "resources/img/IKRMC_Top.png"
+#define IBOC_FN                   "resources/img/IBitmapOverlayControl.png"
+
+// GUI default dimensions
+#define GUI_WIDTH   1024
+#define GUI_HEIGHT  640
 
 // on MSVC, you must define SA_API in the resource editor preprocessor macros as well as the c++ ones
 #if defined(SA_API) && !defined(OS_IOS)
-#include "app_wrapper/app_resource.h"
+#include "../app_wrapper/app_resource.h"
 #endif
 
 // vst3 stuff

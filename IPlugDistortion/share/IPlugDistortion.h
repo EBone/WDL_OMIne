@@ -1,4 +1,4 @@
-#ifndef __IPLUGDISTORTION_H__
+﻿#ifndef __IPLUGDISTORTION_H__
 #define __IPLUGDISTORTION_H__
 
 /*
@@ -40,7 +40,24 @@
 enum EParams
 {
   kDrive = 0,
-  kNumParams
+    kISwitchControl_2,
+    kISwitchControl_3,
+    kIInvisibleSwitchControl,
+    kIRadioButtonsControl_H,
+    kIRadioButtonsControl_V,
+    kIContactControl,
+    kIFaderControl_Horiz,
+    kIFaderControl_Vert,
+    kIKnobLineControl_def,
+    kIKnobLineControl_lo_gear,
+    kIKnobRotaterControl_def,
+    kIKnobRotaterControl_restrict,
+    kIKnobMultiControl_def,
+    kIKnobMultiControl_Horiz,
+    kIKnobRotatingMaskControl,
+    kICaptionControl,
+    kNumParams,   // put any controls to be controlled from the plug but not
+    kInvisibleSwitchIndicator   // the user after kNumParams so they get a param id
 };
 
 
@@ -60,9 +77,10 @@ private:
   double mDistortedDC;
 
   double mDrive, mGain;
-
+  IPanelControl *panel;
   WDL_BesselFilterCoeffs mAntiAlias;
   WDL_BesselFilterStage mUpsample, mDownsample;
+  int mIISC_Indicator;
 };
 
 

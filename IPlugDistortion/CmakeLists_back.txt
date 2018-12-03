@@ -1,0 +1,32 @@
+﻿project(Distortion)
+
+file(GLOB app_wrapper app_wrapper/*.h )
+file(GLOB app_wrapper_src app_wrapper/*.cpp)
+file(GLOB asio_h ../ASIO_SDK/include/*.h)
+file(GLOB asio_src ../ASIO_SDK/include/*.cpp)
+source_group(ASIO FILES ${asio_h} ${asio_src})
+
+include_directories(../WDL/IPlug)
+include_directories(../WDL/IPlug/impl)
+include_directories(../WDL)
+include_directories(../WDL/rtaudiomidi)
+include_directories(../ASIO_SDK/include)
+include_directories(../VST_SDK)
+
+file(GLOB Standalone_wrapper ../WDL/IPlug/IPlugStandalone.h ../WDL/IPlug/IPlugStandalone.cpp )
+file(GLOB VST2_wrapper ../WDL/IPlug/IPlugVST.h ../WDL/IPlug/IPlugVST.cpp)
+source_group(main_share FILES ${app_wrapper} ${app_wrapper_src} ${Standalone_wrapper}) 
+source_group(src FILES ../WDL/besselfilter.cpp resource.h  IPlugDistortion.h IPlugDistortion.cpp)
+source_group(VST2 FILES ${VST2_wrapper})
+source_group(rc FILES IPlugDistortion.rc)
+add_executable(Distortion IPlugDistortion.h IPlugDistortion.cpp ${asio_h} ${asio_src} ${app_wrapper} ${app_wrapper_src} ${Standalone_wrapper} ../WDL/besselfilter.cpp resource.h IPlugDistortion.rc)
+target_link_libraries(Distortion lice Iplug_app rtaudiomidi kernel32 WinInet Gdi32 WinSpool ComDlg32)
+target_link_libraries(Distortion AdvApi32 shell32 Ole32 Uuid odbc32 odbccp32 OleAut32 ComCtl32)
+
+add_library(Dis_dll SHARED IPlugDistortion.h IPlugDistortion.cpp ../WDL/besselfilter.cpp resource.h IPlugDistortion.rc ${VST2_wrapper})
+target_link_libraries(Dis_dll lice Iplug_app rtaudiomidi kernel32 WinInet Gdi32 WinSpool ComDlg32)
+target_link_libraries(Dis_dll AdvApi32 shell32 Ole32 Uuid odbc32 odbccp32 OleAut32 ComCtl32)
+
+
+set_target_properties(Distortion PROPERTIES WIN32_EXECUTABLE 1)
+set_target_properties(Dis_dll PROPERTIES WIN32_EXECUTABLE 1)
