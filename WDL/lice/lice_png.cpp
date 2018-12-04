@@ -1,4 +1,4 @@
-/*
+﻿/*
   Cockos WDL - LICE - Lightweight Image Compositing Engine
   Copyright (C) 2007 and later, Cockos Incorporated
   File: lice_png.cpp (PNG loading for LICE)
@@ -7,7 +7,7 @@
 
 #include "lice.h"
 
-#include "../wdltypes.h"
+#include "../wdl/wdltypes.h"
 
 #include <stdio.h>
 #include "../libpng/png.h"

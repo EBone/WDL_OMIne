@@ -81,7 +81,7 @@ instrument determined by PLUG _IS _INST
 #define IBOC_ID                 112
 
 // Image resource locations for this plug.
-#define BG_FN                     "C:/Users/TBT_E/wdl-ol/IPlugExamples/IPlugControls/resources/img/BG_1024x640.png"
+#define BG_FN                     "resources/img/BG_1024x640.png"
 #define ISWITCHCONTROL_2_FN       "resources/img/ISwitchControl_x2.png"
 #define ISWITCHCONTROL_3_FN       "resources/img/ISwitchControl_x3.png"
 #define IRADIOBUTTONSCONTROL_FN   "resources/img/IRadioButtonsControl_x2.png"

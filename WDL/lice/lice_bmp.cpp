@@ -1,4 +1,4 @@
-/*
+﻿/*
   Cockos WDL - LICE - Lightweight Image Compositing Engine
   Copyright (C) 2007 and later, Cockos Incorporated
   File: lice_bmp.cpp (BMP loading for LICE)
@@ -6,7 +6,7 @@
 */
 
 #include "lice.h"
-#include "../wdltypes.h"
+#include "../wdl/wdltypes.h"
 #ifndef _WIN32
 #include "../swell/swell.h"
 #endif

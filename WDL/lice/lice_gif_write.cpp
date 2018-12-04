@@ -1,4 +1,4 @@
-/*
+﻿/*
   Cockos WDL - LICE - Lightweight Image Compositing Engine
   Copyright (C) 2007 and later, Cockos Incorporated
   File: lice_gif.cpp (GIF loading for LICE)
@@ -9,7 +9,7 @@
 
 #include <stdio.h>
 
-#include "../wdltypes.h"
+#include "../wdl/wdltypes.h"
 
 extern "C" {
 

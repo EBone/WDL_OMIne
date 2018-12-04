@@ -15,17 +15,17 @@ include_directories("${PROJECT_BINARY_DIR}")
 
 include_directories(../../WDL/IPlug)
 include_directories(../../WDL/IPlug/impl)
-include_directories(../../WDL)
+include_directories(../../WDL/wdl)
 include_directories(../../WDL/rtaudiomidi)
 include_directories(../../VST_SDK)
 
 file(GLOB VST2_wrapper ../../WDL/IPlug/IPlugVST.h ../../WDL/IPlug/IPlugVST.cpp)
-source_group(src FILES ../../WDL/besselfilter.cpp ../share/resource.h  ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp)
+source_group(src FILES  ../share/resource.h  ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp)
 source_group(VST2 FILES ${VST2_wrapper})
 source_group(rc FILES ../share/IPlugDistortion.rc)
 
-add_library(Dis_Vst SHARED ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp ../../WDL/besselfilter.cpp ../share/resource.h ../share/IPlugDistortion.rc ${VST2_wrapper})
+add_library(Dis_Vst SHARED ../share/IPlugDistortion.h ../share/IPlugDistortion.cpp ../share/resource.h ../share/IPlugDistortion.rc ${VST2_wrapper})
 target_link_libraries(Dis_Vst lice Iplug_app rtaudiomidi kernel32 WinInet Gdi32 WinSpool ComDlg32)
 target_link_libraries(Dis_Vst AdvApi32 shell32 Ole32 Uuid odbc32 odbccp32 OleAut32 ComCtl32)
-
+target_link_libraries(Dis_Vst wdl)
 set_target_properties(Dis_Vst PROPERTIES WIN32_EXECUTABLE 1)

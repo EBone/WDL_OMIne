@@ -1,6 +1,6 @@
-#include "lice.h"
-#include "../ptrlist.h"
-#include "../wdltypes.h"
+﻿#include "lice.h"
+#include "../wdl/ptrlist.h"
+#include "../wdl/wdltypes.h"
 
 
 #define OCTREE_DEPTH 5  // every depth level adds 3 bits of RGB colorspace (depth 8 => 24-bit RGB)

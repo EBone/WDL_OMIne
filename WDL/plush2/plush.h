@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
   plush.h
   PLUSH 3D VERSION 2.0  MAIN HEADER
   Copyright (c) 1996-2000 Justin Frankel
@@ -33,8 +33,8 @@
 #include <math.h>
 
 #include "../lice/lice.h" // using LICE for images
-#include "../ptrlist.h"
-#include "../wdltypes.h"
+#include "../wdl/ptrlist.h"
+#include "../wdl/wdltypes.h"
 
 typedef float pl_ZBuffer;              /* z-buffer type (must be float) */
 typedef double pl_Float;               /* General floating point */

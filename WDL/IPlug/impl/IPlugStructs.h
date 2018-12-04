@@ -1,11 +1,11 @@
-#ifndef _IPLUGSTRUCTS_
+﻿#ifndef _IPLUGSTRUCTS_
 #define _IPLUGSTRUCTS_
 
 #include "Containers.h"
 #include "IPlugOSDetect.h"
 
-#include "../swell/swell.h"
-#include "../lice/lice_text.h"
+#include "../../swell/swell.h"
+#include "../../lice/lice_text.h"
 
 enum EFileAction { kFileOpen, kFileSave };
 

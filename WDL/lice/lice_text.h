@@ -1,9 +1,9 @@
-#ifndef _LICE_TEXT_H_
+﻿#ifndef _LICE_TEXT_H_
 #define _LICE_TEXT_H_
 
 #include "lice.h"
 
-#include "../heapbuf.h"
+#include "../wdl/heapbuf.h"
 
 #define LICE_FONT_FLAG_VERTICAL 1 // rotate text to vertical (do not set the windows font to vertical though)
 #define LICE_FONT_FLAG_VERTICAL_BOTTOMUP 2

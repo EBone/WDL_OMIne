@@ -1,10 +1,10 @@
-#include "lice.h"
+﻿#include "lice.h"
 #include <stdio.h>
 #include <math.h>
-#include "../projectcontext.h"
-#include "../lineparse.h"
-#include "../ptrlist.h"
-#include "../assocarray.h"
+#include "../wdl/projectcontext.h"
+#include "../wdl/lineparse.h"
+#include "../wdl/ptrlist.h"
+#include "../wdl/assocarray.h"
 
 #define PI 3.1415926535897932384626433832795
 

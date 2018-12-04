@@ -1,11 +1,11 @@
-#include "IPlugBase.h"
+﻿#include "IPlugBase.h"
 #include "IGraphics.h"
 #include "IControl.h"
 #include <math.h>
 #include <stdio.h>
 #include <time.h>
-#include "../wdlendian.h"
-#include "../base64encdec.h"
+#include "../wdl/wdlendian.h"
+#include "../wdl/base64encdec.h"
 
 #ifndef VstInt32
   #ifdef WIN32

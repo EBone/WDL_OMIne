@@ -1,4 +1,4 @@
-#ifndef _IPOPUPMENU_
+﻿#ifndef _IPOPUPMENU_
 #define _IPOPUPMENU_
 
 #include <math.h>
@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "../mutex.h"
-#include "../wdlstring.h"
-#include "../ptrlist.h"
+#include "../../wdl/mutex.h"
+#include "../../wdl/wdlstring.h"
+#include "../../wdl/ptrlist.h"
 
 // this (and the platform implementation in IGraphics*) is largely based on the VSTGUI COptionMenu
 
