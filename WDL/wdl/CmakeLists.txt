@@ -1,7 +1,7 @@
 project(wdl)
 
 file(GLOB wdl_h *.h)
-file(GLOB wdl_src *.cpp)
+file(GLOB wdl_src *.cpp *.c)
 include_directories(../)
 source_group(src FILES ${wdl_h} ${wdl_src})
 add_library(wdl STATIC ${wdl_h} ${wdl_src})
